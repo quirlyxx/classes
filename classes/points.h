@@ -19,13 +19,13 @@ public:
         z = value; 
     }
 
-    inline double getX() const {
+    inline double getX() {
         return x; 
     }
-    inline double getY() const {
+    inline double getY() {
         return y; 
     }
-    inline double getZ() const { 
+    inline double getZ() { 
         return z; 
     }
 
