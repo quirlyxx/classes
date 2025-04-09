@@ -4,6 +4,9 @@
 #include <cstdio>
 using namespace std;
 
+Point::Point() : x(0), y(0), z(0) {}
+Point::Point(double x, double y, double z) : x(x), y(y), z(z) {}
+
 void Point::input() {
     cout << "Enter x: "; cin >> x;
     cout << "Enter y: "; cin >> y;
@@ -11,16 +14,8 @@ void Point::input() {
 }
 
 void Point::output() {
-    cout << "Point coordinates: (" << x << ", " << y << ", " << z << ")" << endl;
+    cout << "Point coordinates: " << x << ", " << y << ", " << z << endl;
 }
-
-void Point::setX(double value) { x = value; }
-void Point::setY(double value) { y = value; }
-void Point::setZ(double value) { z = value; }
-
-double Point::getX() { return x; }
-double Point::getY() { return y; }
-double Point::getZ() { return z; }
 
 void Point::saveToFile(const char* filename) {
     FILE* file = fopen(filename, "w");
@@ -30,7 +25,7 @@ void Point::saveToFile(const char* filename) {
         cout << "Point saved to file." << endl;
     }
     else {
-        cout << "Error opening file for writing!" << endl;
+        cout << "Error opening file for writing" << endl;
     }
 }
 
@@ -42,6 +37,6 @@ void Point::loadFromFile(const char* filename) {
         cout << "Point loaded from file." << endl;
     }
     else {
-        cout << "Error opening file for reading!" << endl;
+        cout << "Error opening file for reading" << endl;
     }
 }

@@ -10,5 +10,6 @@
 //        "Kherson", "Ukraine", "Uni1", "Kyiv", "Ukraine", "P42");
 //    student2.output();
 //
+//
 //    return 0;
 //}
